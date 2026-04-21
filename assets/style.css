@@ -1,0 +1,666 @@
+/* ============================================================
+   chajon.ca — Shared Stylesheet
+   ============================================================
+   Edit this file to restyle the entire site at once.
+
+   TABLE OF CONTENTS
+   1. Design Tokens  (colours, fonts, spacing — change these first)
+   2. Reset & Base
+   3. Layout
+   4. Header & Nav
+   5. Footer
+   6. Buttons
+   7. Page: Home
+   8. Page: Resume
+   9. Page: Projects
+   10. Page: Contact
+   11. Responsive
+   ============================================================ */
+
+
+/* ============================================================
+   1. DESIGN TOKENS
+   ============================================================ */
+
+:root {
+  /* Colours — sourced from the original Wix palette */
+  --clr-bg:           #eae5e5;   /* page background (warm off-white) */
+  --clr-surface:      #ffffff;   /* card / panel background */
+  --clr-accent-red:   #e83556;   /* primary buttons, footer bar */
+  --clr-accent-red-dk:#9b2439;   /* button hover */
+  --clr-accent-teal:  #61d0d4;   /* secondary buttons, icons */
+  --clr-accent-teal-dk: #41898d; /* secondary hover */
+  --clr-accent-gold:  #d1c926;   /* tertiary button */
+  --clr-accent-gold-dk: #8b8619; /* tertiary hover */
+  --clr-text:         #4d4d4d;   /* body copy */
+  --clr-text-dark:    #000000;   /* headings */
+  --clr-text-light:   #ffffff;   /* text on dark surfaces */
+  --clr-border:       #c4c4c4;
+
+  /* Typography */
+  --font-heading:     'Noticia Text', Georgia, serif;
+  --font-body:        'Open Sans', Arial, sans-serif;
+
+  /* Spacing */
+  --max-width:        980px;
+  --header-pad:       35px 40px 15px;
+  --section-pad:      60px 40px;
+  --footer-pad:       40px;
+
+  /* Misc */
+  --radius-btn:       50%;       /* round buttons — change to e.g. 6px for pill */
+  --btn-size:         130px;
+  --shadow-card:      0 2px 8px rgba(0,0,0,.12);
+  --transition:       0.2s ease;
+}
+
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--clr-bg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--clr-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--clr-text-dark);
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+p { margin: 0 0 1em; }
+a { color: inherit; text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+
+/* ============================================================
+   3. LAYOUT
+   ============================================================ */
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+main {
+  flex: 1;
+  padding: var(--section-pad);
+}
+
+.page-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   4. HEADER & NAV
+   ============================================================ */
+
+site-header {
+  display: block;
+  background-color: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--header-pad);
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 43px;
+  font-weight: bold;
+  color: var(--clr-text-dark);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.site-title a:hover { text-decoration: none; opacity: 0.85; }
+
+.site-subtitle {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--clr-text);
+  margin: 6px 0 0;
+}
+
+nav.site-nav {
+  margin-top: 14px;
+}
+
+nav.site-nav ul {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav.site-nav a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--clr-text);
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  color: var(--clr-accent-red);
+  border-bottom-color: var(--clr-accent-red);
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   5. FOOTER
+   ============================================================ */
+
+site-footer {
+  display: block;
+  background-color: var(--clr-accent-red);
+  color: var(--clr-text-light);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--footer-pad) 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--clr-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 10px;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 12px;
+  color: var(--clr-text-light);
+  line-height: 1.8;
+}
+
+.footer-col a:hover { text-decoration: underline; }
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  transition: background var(--transition);
+}
+
+.footer-social a:hover {
+  background: rgba(255,255,255,.35);
+  text-decoration: none;
+}
+
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--clr-text-light);
+}
+
+.footer-copy {
+  font-size: 11px;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+
+/* ============================================================
+   6. BUTTONS
+   ============================================================ */
+
+.btn-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--clr-text-light);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--transition), transform var(--transition);
+  text-decoration: none;
+  line-height: 1.3;
+  padding: 12px;
+}
+
+.btn-circle:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.btn-red   { background-color: var(--clr-accent-red); }
+.btn-red:hover { background-color: var(--clr-accent-red-dk); }
+
+.btn-teal  { background-color: var(--clr-accent-teal); }
+.btn-teal:hover { background-color: var(--clr-accent-teal-dk); }
+
+.btn-gold  { background-color: var(--clr-accent-gold); }
+.btn-gold:hover { background-color: var(--clr-accent-gold-dk); }
+
+/* Standard rectangular button (contact form, etc.) */
+.btn {
+  display: inline-block;
+  padding: 10px 28px;
+  background-color: var(--clr-accent-red);
+  color: var(--clr-text-light);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn:hover { background-color: var(--clr-accent-red-dk); text-decoration: none; }
+
+
+/* ============================================================
+   7. PAGE: HOME  (index.html)
+   ============================================================ */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 385px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.home-photo {
+  width: 385px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+  /* Change border-radius to 0 for a square photo */
+}
+
+.home-intro h2 {
+  font-size: 72px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.home-intro h3 {
+  font-size: 40px;
+  font-weight: normal;
+  color: var(--clr-text);
+  margin-bottom: 32px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.home-description {
+  font-size: 13px;
+  color: var(--clr-text);
+  max-width: 430px;
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   8. PAGE: RESUME  (resume.html)
+   ============================================================ */
+
+.resume-header {
+  margin-bottom: 40px;
+}
+
+.resume-header h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.resume-header .linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--clr-accent-teal-dk);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.resume-header .linkedin-link:hover { text-decoration: underline; }
+
+.resume-intro {
+  font-size: 14px;
+  max-width: 700px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.resume-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.resume-card {
+  background: var(--clr-surface);
+  border-radius: 8px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.resume-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--clr-accent-red-dk);
+}
+
+.resume-card p, .resume-card li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--clr-text);
+}
+
+.resume-card ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+.resume-card ul li { margin-bottom: 6px; }
+
+.resume-card a {
+  color: var(--clr-accent-teal-dk);
+}
+
+.resume-card a:hover { text-decoration: underline; }
+
+.resume-education {
+  margin-top: 32px;
+}
+
+.resume-education h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.edu-item {
+  background: var(--clr-surface);
+  border-radius: 8px;
+  padding: 24px 32px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 16px;
+}
+
+.edu-item h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.edu-item .edu-years {
+  font-size: 12px;
+  color: var(--clr-accent-teal-dk);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.edu-item p {
+  font-size: 13px;
+  color: var(--clr-text);
+}
+
+.edu-item a { color: var(--clr-accent-teal-dk); }
+.edu-item a:hover { text-decoration: underline; }
+
+
+/* ============================================================
+   9. PAGE: PROJECTS  (projects.html)
+   ============================================================ */
+
+.projects-header h1 {
+  font-size: 36px;
+  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--clr-surface);
+  border-radius: 8px;
+  padding: 28px 28px 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: var(--clr-accent-red-dk);
+}
+
+.project-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--clr-text);
+  flex: 1;
+}
+
+.project-card .tech-tag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--clr-accent-teal-dk);
+  background: rgba(97,208,212,.12);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.projects-cta {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.projects-cta a {
+  color: var(--clr-accent-red);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.projects-cta a:hover { text-decoration: underline; }
+
+
+/* ============================================================
+   10. PAGE: CONTACT  (contact.html)
+   ============================================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h1 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.contact-detail {
+  margin-bottom: 20px;
+}
+
+.contact-detail h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-text-dark);
+  margin-bottom: 4px;
+}
+
+.contact-detail a, .contact-detail p {
+  font-size: 15px;
+  color: var(--clr-text);
+}
+
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Contact form */
+.contact-form h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-text);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  border: 1px solid var(--clr-border);
+  border-radius: 4px;
+  background: var(--clr-surface);
+  color: var(--clr-text-dark);
+  transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent-teal);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-success {
+  display: none;
+  padding: 12px 16px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+
+/* ============================================================
+   11. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  main { padding: 40px 20px; }
+
+  .site-title { font-size: 28px; }
+
+  /* Home */
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .home-intro h2 { font-size: 48px; }
+  .home-intro h3 { font-size: 26px; }
+
+  /* Resume */
+  .resume-sections { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; gap: 30px; }
+}
+
+@media (max-width: 480px) {
+  .home-buttons { flex-direction: column; align-items: flex-start; }
+  .btn-circle { width: 110px; height: 110px; font-size: 12px; }
+  nav.site-nav ul { gap: 14px; }
+}
