@@ -32,6 +32,8 @@
   --clr-accent-teal-dk: #41898d; /* secondary hover */
   --clr-accent-gold:  #d1c926;   /* tertiary button */
   --clr-accent-gold-dk: #8b8619; /* tertiary hover */
+  --clr-accent-green:    #4caf82; /* quaternary button — sage green */
+  --clr-accent-green-dk: #357a5a; /* quaternary hover */
   --clr-text:         #4d4d4d;   /* body copy */
   --clr-text-dark:    #000000;   /* headings */
   --clr-text-light:   #ffffff;   /* text on dark surfaces */
@@ -291,6 +293,9 @@ site-footer {
 
 .btn-gold  { background-color: var(--clr-accent-gold); }
 .btn-gold:hover { background-color: var(--clr-accent-gold-dk); }
+
+.btn-green { background-color: var(--clr-accent-green); }
+.btn-green:hover { background-color: var(--clr-accent-green-dk); }
 
 /* Standard rectangular button (contact form, etc.) */
 .btn {
