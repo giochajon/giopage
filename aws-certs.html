@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AWS Certifications | chajon.ca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --c-bg:     #eae5e5;
+      --c-red:    #e83556;
+      --c-red-dk: #9b2439;
+      --c-teal:   #61d0d4;
+      --c-text:   #4d4d4d;
+      --c-black:  #000;
+      --c-grey:   #8b8b8b;
+      --c-white:  #fff;
+      --site-w:   980px;
+    }
+
+    body { background-color: var(--c-bg); margin: 0; padding: 0; }
+
+    .pw {
+      max-width: var(--site-w);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Header ── */
+    .site-hdr {
+      background-color: var(--c-bg);
+      border-bottom: 1px solid #c4c4c4;
+      padding: 35px 0 15px;
+    }
+    .site-hdr .pw { padding-left: 77px; }
+
+    .hdr-name {
+      display: block;
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 43px;
+      font-weight: bold;
+      color: var(--c-black);
+      text-decoration: none;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .hdr-name:hover { opacity: .85; text-decoration: none; }
+
+    .hdr-sub {
+      display: block;
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 18px;
+      color: var(--c-black);
+      text-decoration: none;
+      margin-top: 4px;
+      line-height: 1.2;
+    }
+    .hdr-sub:hover { opacity: .85; text-decoration: none; }
+
+    /* ── Main ── */
+    .page-body {
+      padding: 39px 0 80px;
+    }
+    .page-body .pw { padding-left: 77px; }
+
+    .pg-title {
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 80px;
+      font-weight: normal;
+      color: var(--c-black);
+      margin: 0 0 11px;
+      line-height: 1.2;
+    }
+
+    .hr-main {
+      border: none;
+      border-top: 1px solid var(--c-grey);
+      width: 595px;
+      margin: 0;
+    }
+
+    /* Intro text block */
+    .intro-block {
+      padding: 28px 0 34px;
+      max-width: 595px;
+    }
+    .intro-block p {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.7em;
+      color: var(--c-text);
+      margin: 0 0 0.8em;
+    }
+
+    /* ── Badges grid ── */
+    .badges-section {
+      padding: 10px 0 60px;
+    }
+
+    .badges-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      padding-top: 34px;
+    }
+
+    /* Individual badge card */
+    .badge-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      width: 170px;
+      transition: transform 0.2s ease;
+    }
+    .badge-card:hover {
+      transform: scale(1.05);
+      text-decoration: none;
+    }
+
+    /* Badge image container — white card with subtle shadow */
+    .badge-img-wrap {
+      width: 160px;
+      height: 160px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.13);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      box-sizing: border-box;
+      transition: box-shadow 0.2s ease;
+    }
+    .badge-card:hover .badge-img-wrap {
+      box-shadow: 0 4px 18px rgba(0,0,0,.2);
+    }
+
+    .badge-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Badge label */
+    .badge-label {
+      margin-top: 14px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--c-text);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .badge-level {
+      margin-top: 4px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 11px;
+      color: #41898d;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* "View on Credly" micro-link */
+    .badge-credly {
+      margin-top: 6px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 11px;
+      color: var(--c-red);
+      text-decoration: none;
+      text-align: center;
+    }
+    .badge-card:hover .badge-credly { text-decoration: underline; }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #41898d;
+      text-decoration: none;
+      margin-top: 40px;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .back-link svg { flex-shrink: 0; }
+
+    /* ── Footer ── */
+    .site-ftr {
+      background-color: var(--c-red);
+      padding: 40px 0;
+    }
+    .ftr-inner {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .ftr-col h4 {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--c-white);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin: 0 0 8px;
+    }
+    .ftr-col p, .ftr-col a {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--c-white);
+      line-height: 1.8;
+      margin: 0;
+      text-decoration: none;
+    }
+    .ftr-col a:hover { text-decoration: underline; }
+    .ftr-social { display: flex; gap: 8px; margin-top: 6px; }
+    .ftr-social img { width: 22px; height: 22px; display: block; }
+
+    @media (max-width: 840px) {
+      .site-hdr .pw, .page-body .pw { padding-left: 20px; }
+      .hdr-name { font-size: 28px; }
+      .pg-title  { font-size: 48px; }
+      .hr-main   { width: 100%; }
+      .badges-grid { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═════════════ HEADER ═════════════ -->
+<header class="site-hdr">
+  <div class="pw">
+    <a class="hdr-name" href="./index.html">Giovanni (Gio) Chajon</a>
+    <a class="hdr-sub"  href="./index.html">IT Professional / Ham Radio Enthusiast ( VE6GIO ) / Homebrewing and Electronics</a>
+  </div>
+</header>
+
+<!-- ═════════════ MAIN ═════════════ -->
+<main class="page-body">
+  <div class="pw">
+
+    <h2 class="pg-title">AWS Certifications</h2>
+    <hr class="hr-main">
+
+    <!-- Intro -->
+    <div class="intro-block">
+      <p>
+        As cloud infrastructure became central to my work as a Site Reliability Engineer, earning AWS certifications was a natural step in validating the skills I had built in production environments.
+        The badges below represent my current AWS certification achievements — click any badge to verify it on Credly.
+      </p>
+    </div>
+
+    <hr class="hr-main">
+
+    <!-- Badges -->
+    <div class="badges-section">
+      <div class="badges-grid">
+
+        <!-- Badge 1: AWS Certified DevOps Engineer – Professional -->
+        <a class="badge-card"
+           href="https://www.credly.com/badges/58a6b33e-822f-40e3-9e0e-bcdce932bf42/public_url"
+           target="_blank"
+           rel="noopener"
+           aria-label="AWS Certified DevOps Engineer – Professional on Credly">
+          <div class="badge-img-wrap">
+            <img
+              src="https://images.credly.com/images/bd31ef42-d460-493e-8503-39592aaf0458/image.png"
+              alt="AWS Certified DevOps Engineer – Professional badge">
+          </div>
+          <span class="badge-label">AWS Certified DevOps Engineer – Professional</span>
+          <span class="badge-level">Professional</span>
+          <span class="badge-credly">View on Credly ↗</span>
+        </a>
+
+        <!-- Badge 2: AWS Certified SysOps Administrator – Associate -->
+        <a class="badge-card"
+           href="https://www.credly.com/badges/749d70de-a87a-487a-87d8-a9845ebcc2bf/public_url"
+           target="_blank"
+           rel="noopener"
+           aria-label="AWS Certified SysOps Administrator – Associate on Credly">
+          <div class="badge-img-wrap">
+            <img
+              src="https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png"
+              alt="AWS Certified SysOps Administrator – Associate badge">
+          </div>
+          <span class="badge-label">AWS Certified SysOps Administrator – Associate</span>
+          <span class="badge-level">Associate</span>
+          <span class="badge-credly">View on Credly ↗</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Back link -->
+    <a class="back-link" href="resume.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8.5 2.5L4 7L8.5 11.5" stroke="#41898d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Resume
+    </a>
+
+  </div>
+</main>
+
+<!-- ═════════════ FOOTER ═════════════ -->
+<footer class="site-ftr">
+  <div class="pw">
+    <div class="ftr-inner">
+
+      <div class="ftr-col">
+        <h4>Follow me</h4>
+        <div class="ftr-social">
+          <a href="https://www.facebook.com/gchajon" target="_blank" aria-label="Facebook">
+            <img src="https://static.wixstatic.com/media/4f857b2e8a316c4e1ed16717a3d4ec8c.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4f857b2e8a316c4e1ed16717a3d4ec8c.png" alt="Facebook" width="22" height="22">
+          </a>
+          <a href="https://twitter.com/gchajon" target="_blank" aria-label="Twitter">
+            <img src="https://static.wixstatic.com/media/89b1d2497b29ccbb7d37be1ec6ef0052.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/89b1d2497b29ccbb7d37be1ec6ef0052.png" alt="Twitter" width="22" height="22">
+          </a>
+          <a href="https://plus.google.com/+GiovanniChajon" target="_blank" aria-label="Google+">
+            <img src="https://static.wixstatic.com/media/eb9767422f0e4c41a507d3e67c4ebac8.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/eb9767422f0e4c41a507d3e67c4ebac8.png" alt="Google+" width="22" height="22">
+          </a>
+        </div>
+      </div>
+
+      <div class="ftr-col">
+        <h4>Call</h4>
+      </div>
+
+      <div class="ftr-col">
+        <h4>Contact</h4>
+      </div>
+
+      <div class="ftr-col">
+        <p>© 2018 Giovanni Chajon</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
