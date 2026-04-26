@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CompTIA Certifications | chajon.ca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --c-bg:      #eae5e5;
+      --c-red:     #e83556;
+      --c-red-dk:  #9b2439;
+      --c-teal:    #61d0d4;
+      --c-text:    #4d4d4d;
+      --c-black:   #000;
+      --c-grey:    #8b8b8b;
+      --c-white:   #fff;
+      --site-w:    980px;
+    }
+
+    body { background-color: var(--c-bg); margin: 0; padding: 0; }
+
+    .pw {
+      max-width: var(--site-w);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ══ HEADER ══ */
+    .site-hdr {
+      background-color: var(--c-bg);
+      border-bottom: 1px solid #c4c4c4;
+      padding: 35px 0 15px;
+    }
+    .site-hdr .pw { padding-left: 77px; }
+
+    .hdr-name {
+      display: block;
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 43px;
+      font-weight: bold;
+      color: var(--c-black);
+      text-decoration: none;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .hdr-name:hover { opacity: .85; }
+
+    .hdr-sub {
+      display: block;
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 18px;
+      color: var(--c-black);
+      text-decoration: none;
+      margin-top: 4px;
+      line-height: 1.2;
+    }
+    .hdr-sub:hover { opacity: .85; }
+
+    /* ══ MAIN ══ */
+    .page-body { padding: 39px 0 80px; }
+    .page-body .pw { padding-left: 77px; }
+
+    .pg-title {
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 80px;
+      font-weight: normal;
+      color: var(--c-black);
+      margin: 0 0 11px;
+      line-height: 1.2;
+    }
+
+    .pg-subtitle {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 14px;
+      color: var(--c-text);
+      margin: 0 0 24px;
+    }
+    .pg-subtitle a { color: var(--c-text); text-decoration: underline; }
+    .pg-subtitle a:hover { color: var(--c-black); }
+
+    .hr-main {
+      border: none;
+      border-top: 1px solid var(--c-grey);
+      width: 760px;
+      margin: 0;
+    }
+
+    /* ── Cert card row ── */
+    .cert-row {
+      display: flex;
+      align-items: flex-start;
+      padding: 34px 0;
+      gap: 30px;
+    }
+
+    /* Logo box */
+    .cert-logo {
+      flex-shrink: 0;
+      width: 130px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--c-white);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.10);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .cert-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* Text block */
+    .cert-txt { flex: 1; max-width: 560px; }
+
+    .cert-txt h6 {
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--c-black);
+      margin: 0 0 6px;
+      line-height: 1.3;
+    }
+    .cert-txt h6 a {
+      color: var(--c-black);
+      text-decoration: none;
+    }
+    .cert-txt h6 a:hover {
+      color: var(--c-red);
+      text-decoration: underline;
+    }
+
+    .cert-badge {
+      display: inline-block;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      background: var(--c-red);
+      color: var(--c-white);
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+
+    .cert-txt p {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.6em;
+      color: var(--c-text);
+      margin: 0;
+    }
+
+    .cert-verify {
+      display: inline-block;
+      margin-top: 12px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--c-red);
+      text-decoration: none;
+      border: 1.5px solid var(--c-red);
+      border-radius: 20px;
+      padding: 4px 14px;
+      transition: background .2s, color .2s;
+    }
+    .cert-verify:hover {
+      background: var(--c-red);
+      color: var(--c-white);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-block;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      color: var(--c-text);
+      text-decoration: none;
+      margin-bottom: 28px;
+    }
+    .back-link:hover { color: var(--c-black); text-decoration: underline; }
+    .back-link::before { content: '← '; }
+
+    /* ══ FOOTER ══ */
+    .site-ftr { background-color: var(--c-red); padding: 40px 0; }
+    .ftr-inner {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .ftr-col h4 {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--c-white);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin: 0 0 8px;
+    }
+    .ftr-col p, .ftr-col a {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--c-white);
+      line-height: 1.8;
+      margin: 0;
+      text-decoration: none;
+    }
+    .ftr-col a:hover { text-decoration: underline; }
+    .ftr-social { display: flex; gap: 8px; margin-top: 6px; }
+    .ftr-social img { width: 22px; height: 22px; display: block; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 840px) {
+      .site-hdr .pw,
+      .page-body .pw { padding-left: 20px; }
+      .hdr-name { font-size: 28px; }
+      .pg-title  { font-size: 48px; }
+      .hr-main   { width: 100%; }
+      .cert-row  { flex-direction: column; gap: 16px; padding: 24px 0; }
+      .cert-txt  { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═════════════ HEADER ═════════════ -->
+<header class="site-hdr">
+  <div class="pw">
+    <a class="hdr-name" href="./index.html">Giovanni (Gio) Chajon</a>
+    <a class="hdr-sub"  href="./index.html">IT Professional / Ham Radio Enthusiast ( VE6GIO ) / Homebrewing and Electronics</a>
+  </div>
+</header>
+
+<!-- ═════════════ MAIN ═════════════ -->
+<main class="page-body">
+  <div class="pw">
+
+    <a class="back-link" href="resume.html">Back to Skills Portfolio</a>
+
+    <h2 class="pg-title">CompTIA Certifications</h2>
+    <p class="pg-subtitle">
+      Verified credentials issued by <a href="https://www.comptia.org/en-us/certifications/" target="_blank">CompTIA</a> — a globally recognised, vendor-neutral IT certification body.
+    </p>
+
+    <hr class="hr-main">
+
+    <!-- ── CompTIA A+ ── -->
+    <div class="cert-row">
+      <div class="cert-logo">
+        <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages4.cmp.optimizely.com%2F5e1ee37c3ed811ef9b3cd2f28d97e4e9&w=256&q=90"
+             alt="CompTIA A+ logo"
+             onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<span style=\'font-family:Open Sans,Arial,sans-serif;font-size:11px;font-weight:700;color:#e83556;text-align:center;\'>CompTIA<br>A+</span>'">
+      </div>
+      <div class="cert-txt">
+        <h6><a href="https://www.comptia.org/en-us/certifications/" target="_blank">CompTIA A+</a></h6>
+        <span class="cert-badge">IT Support &amp; Help Desk</span>
+        <p>CompTIA A+ is the starting point for an IT career. Covering hardware, software, networking, troubleshooting, and security, A+ validates the skills employers need most. The Core 1 &amp; Core 2 exams prepare candidates for IT support and help desk roles worldwide, and build the knowledge needed to pursue advanced certifications such as Network+ and Security+.</p>
+        <a class="cert-verify" href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/J85G997M6CF4QB31" target="_blank">Verify Credential</a>
+      </div>
+    </div>
+
+    <hr class="hr-main">
+
+    <!-- ── CompTIA Network+ ── -->
+    <div class="cert-row">
+      <div class="cert-logo">
+        <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages4.cmp.optimizely.com%2Fd41ae3623ed811efb4f4b6e04b0f8dc9&w=256&q=90"
+             alt="CompTIA Network+ logo"
+             onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<span style=\'font-family:Open Sans,Arial,sans-serif;font-size:11px;font-weight:700;color:#e83556;text-align:center;\'>CompTIA<br>Network+</span>'">
+      </div>
+      <div class="cert-txt">
+        <h6><a href="https://www.comptia.org/en-us/certifications/" target="_blank">CompTIA Network+</a></h6>
+        <span class="cert-badge">Networking</span>
+        <p>CompTIA Network+ is the premier certification for validating essential networking knowledge and skills. It covers network connectivity, documentation, service configuration, data centres, cloud, virtual networking, monitoring, troubleshooting, and security hardening — and is the only industry certification covering both wired and wireless networks. It prepares professionals for roles in technical support, network operations, and system administration.</p>
+        <a class="cert-verify" href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/5H5395KMTL11QGW0" target="_blank">Verify Credential</a>
+      </div>
+    </div>
+
+    <hr class="hr-main">
+
+    <!-- ── CompTIA Security+ ── -->
+    <div class="cert-row">
+      <div class="cert-logo">
+        <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages4.cmp.optimizely.com%2F2db5ec623ed811ef9a86caef3b85ed5c&w=256&q=90"
+             alt="CompTIA Security+ logo"
+             onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<span style=\'font-family:Open Sans,Arial,sans-serif;font-size:11px;font-weight:700;color:#e83556;text-align:center;\'>CompTIA<br>Security+</span>'">
+      </div>
+      <div class="cert-txt">
+        <h6><a href="https://www.comptia.org/en-us/certifications/" target="_blank">CompTIA Security+</a></h6>
+        <span class="cert-badge">Cybersecurity</span>
+        <p>CompTIA Security+ is the most trusted entry-level cybersecurity certification, establishing the essential skills required for core security functions. It validates practical, hands-on abilities in securing networks, applications, and devices while ensuring data integrity, confidentiality, and availability. Globally recognised and vendor-neutral, it is the first security certification IT professionals should earn and serves as a springboard to intermediate-level cybersecurity roles.</p>
+        <a class="cert-verify" href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/9P5H5L7GRDQ1Q432" target="_blank">Verify Credential</a>
+      </div>
+    </div>
+
+    <hr class="hr-main">
+
+    <!-- ── CompTIA Server+ ── -->
+    <div class="cert-row">
+      <div class="cert-logo">
+        <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages4.cmp.optimizely.com%2Fd82882003ed811efbd93e2c4cbdf22e9&w=256&q=90"
+             alt="CompTIA Server+ logo"
+             onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<span style=\'font-family:Open Sans,Arial,sans-serif;font-size:11px;font-weight:700;color:#e83556;text-align:center;\'>CompTIA<br>Server+</span>'">
+      </div>
+      <div class="cert-txt">
+        <h6><a href="https://www.comptia.org/en-us/certifications/" target="_blank">CompTIA Server+</a></h6>
+        <span class="cert-badge">Server Administration</span>
+        <p>CompTIA Server+ validates skills in server installation, management, and troubleshooting, and is the industry standard for professionals working in data centres, on-premises, and hybrid environments. It covers server hardware, administration, security, disaster recovery, and troubleshooting — equipping professionals with the hands-on skills needed to excel in server operations across physical, virtual, and hybrid infrastructures.</p>
+        <a class="cert-verify" href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/2FRM6593ZLBEQRGT" target="_blank">Verify Credential</a>
+      </div>
+    </div>
+
+    <hr class="hr-main">
+
+  </div><!-- /.pw -->
+</main>
+
+<!-- ═════════════ FOOTER ═════════════ -->
+<footer class="site-ftr">
+  <div class="pw">
+    <div class="ftr-inner">
+
+      <div class="ftr-col">
+        <h4>Follow me</h4>
+        <div class="ftr-social">
+          <a href="https://www.facebook.com/gchajon" target="_blank" aria-label="Facebook">
+            <img src="https://static.wixstatic.com/media/4f857b2e8a316c4e1ed16717a3d4ec8c.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4f857b2e8a316c4e1ed16717a3d4ec8c.png" alt="Facebook" width="22" height="22">
+          </a>
+          <a href="https://twitter.com/gchajon" target="_blank" aria-label="Twitter">
+            <img src="https://static.wixstatic.com/media/89b1d2497b29ccbb7d37be1ec6ef0052.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/89b1d2497b29ccbb7d37be1ec6ef0052.png" alt="Twitter" width="22" height="22">
+          </a>
+          <a href="https://plus.google.com/+GiovanniChajon" target="_blank" aria-label="Google+">
+            <img src="https://static.wixstatic.com/media/eb9767422f0e4c41a507d3e67c4ebac8.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/eb9767422f0e4c41a507d3e67c4ebac8.png" alt="Google+" width="22" height="22">
+          </a>
+        </div>
+      </div>
+
+      <div class="ftr-col">
+        <h4>Call</h4>
+      </div>
+
+      <div class="ftr-col">
+        <h4>Contact</h4>
+      </div>
+
+      <div class="ftr-col">
+        <p>© 2026 Giovanni Chajon</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
