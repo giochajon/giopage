@@ -1,92 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ham Radio | Giovanni (Gio) Chajon</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-<style id="compCssMappers_cm8a">#cm8a{width:auto;min-height:1466px;}#pageBackground_cm8a{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_11));--bg-gradient:none;}#WRchTxt18{--text-direction:var(--wix-opt-in-direction);}#FvGrdLn6{transform-origin:center 0.5px;}#WRchTxt5{--text-direction:var(--wix-opt-in-direction);}#iawewbka{--shc-mutated-brightness:49,104,106;}#iawexb4a{--text-direction:var(--wix-opt-in-direction);}#comp-jrbazbbd{--shc-mutated-brightness:49,104,106;}#comp-jrbazbde{--text-direction:var(--wix-opt-in-direction);}#FvGrdLn8{transform-origin:center 0.5px;}#comp-jrbaznud{--shc-mutated-brightness:49,104,106;}#comp-jrbaznze{--text-direction:var(--wix-opt-in-direction);}#comp-jrbavxoh{--text-direction:var(--wix-opt-in-direction);}#comp-jrbb2s1x{transform-origin:center 0.5px;}#FvGrdLn9{transform-origin:center 0.5px;}#WRchTxtb{--text-direction:var(--wix-opt-in-direction);}#iawez9ov{--shc-mutated-brightness:49,104,106;}#iawez9ov_0{--text-direction:var(--wix-opt-in-direction);}#FvGrdLn5{transform-origin:center 0.5px;}#comp-jrbafzd4{--shc-mutated-brightness:49,104,106;}#comp-jrbafzlb{--text-direction:var(--wix-opt-in-direction);}#comp-jrbafzbx{--text-direction:var(--wix-opt-in-direction);}#comp-jrbb22a6{transform-origin:center 0.5px;}#WRchTxte{--text-direction:var(--wix-opt-in-direction);}#comp-jrbanmvb{--shc-mutated-brightness:49,104,106;}#comp-jrbann2r{--text-direction:var(--wix-opt-in-direction);}#comp-jrbanmu3{transform-origin:center 0.5px;}#FvGrdLnb{transform-origin:center 0.5px;}#WRchTxt2{--text-direction:var(--wix-opt-in-direction);}#iawf21em{--shc-mutated-brightness:49,104,106;--margin-start:0px;--margin-end:0px;--fnt:normal normal normal 13px/1.2em 'open sans',sans-serif;direction:var(--wix-opt-in-direction, ltr);--label-align:center;--label-text-align:center;}</style>
+  <link rel="stylesheet" href="assets/style.css">
 
-<style>
-  .rig-figure {
-    margin: 20px 0 8px 0;
-    display: inline-block;
-  }
-  .rig-figure figcaption {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 11px;
-    color: #777;
-    text-align: center;
-    margin-top: 6px;
-    letter-spacing: 0.04em;
-  }
-  /* Crop the image to 450×150 using overflow:hidden on the container */
-  .rig-crop {
-    width: 450px;
-    height: 150px;
-    overflow: hidden;
-    display: block;
-    border-radius: 4px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  }
-  .rig-crop img {
-    width: 450px;          /* keep original display width */
-    height: auto;
-    display: block;
-    margin-top: -10px;     /* shift up slightly to cut white space at top */
-  }
-</style>
+  <style>
+    /* Page title — matches resume.html .pg-title */
+    .pg-title {
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 80px;
+      font-weight: normal;
+      color: #000;
+      margin: 0 0 11px;
+      line-height: 1.2;
+    }
 
+    /* Horizontal rule — matches resume.html .hr-main */
+    .hr-main {
+      border: none;
+      border-top: 1px solid #8b8b8b;
+      width: 595px;
+      margin: 0 0 34px;
+    }
+
+    /* Section heading — matches resume.html .sec-txt h6 */
+    .ham-heading {
+      font-family: 'Noticia Text', Georgia, serif;
+      font-size: 17px;
+      font-weight: normal;
+      color: #000;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    /* Body text — matches resume.html .sec-txt p */
+    .ham-body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.5em;
+      color: #4d4d4d;
+      margin: 0 0 14px;
+      max-width: 595px;
+    }
+
+    .ham-body a {
+      color: #4d4d4d;
+      text-decoration: underline;
+    }
+    .ham-body a:hover { color: #000; }
+
+    .ham-link {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13px;
+      color: #4d4d4d;
+      text-decoration: underline;
+    }
+    .ham-link:hover { color: #000; }
+
+    /* Rig image */
+    .rig-figure {
+      margin: 8px 0 20px 0;
+      display: inline-block;
+    }
+    .rig-figure figcaption {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      color: #777;
+      text-align: center;
+      margin-top: 6px;
+      letter-spacing: 0.04em;
+    }
+    .rig-crop {
+      width: 450px;
+      height: 150px;
+      overflow: hidden;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+    .rig-crop img {
+      width: 450px;
+      height: auto;
+      display: block;
+      margin-top: -10px;
+    }
+
+    @media (max-width: 840px) {
+      .pg-title  { font-size: 48px; }
+      .hr-main   { width: 100%; }
+      .rig-crop  { width: 100%; height: 120px; }
+      .rig-crop img { width: 100%; }
+    }
+  </style>
 </head>
-<body class=''>
 
-<div id="SITE_CONTAINER"><div id="main_MF" class="main_MF"><div id="SCROLL_TO_TOP" class="Vd6aQZ ignore-focus SCROLL_TO_TOP" role="region" tabindex="-1" aria-label="top of page"><span class="mHZSwn">top of page</span></div></div><div id="BACKGROUND_GROUP" class="backgroundGroup_cm8a BACKGROUND_GROUP"><div id="BACKGROUND_GROUP_TRANSITION_GROUP"><div id="pageBackground_cm8a" data-media-height-override-type="" data-media-position-override="false" class="pageBackground_cm8a BmZ5pC"><div id="bgLayers_pageBackground_cm8a" data-hook="bgLayers" data-motion-part="BG_LAYER pageBackground_cm8a" class="MW5IWV"><div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div><div id="bgMedia_pageBackground_cm8a" data-motion-part="BG_MEDIA pageBackground_cm8a" class="VgO9Yg"></div><div data-testid="bgOverlay" class="m4khSP"></div></div></div></div></div><div id="site-root" class="site-root"><div id="masterPage" class="mesh-layout masterPage css-editing-scope"><header id="SITE_HEADER" class="AT7o0U SITE_HEADER wixui-header" tabindex="-1"><div class="lvxhkV"></div><div class="cKxVkc"><div class="vlM3HR"></div><div class="VrZrC0"><div data-mesh-id="SITE_HEADERinlineContent" data-testid="inline-content" class=""><div data-mesh-id="SITE_HEADERinlineContent-gridContainer" data-testid="mesh-container-content"><!--$--><div id="WRchTxt9" class="MMl86N zQ9jDz qvSjx3 Vq6kJx WRchTxt9 wixui-rich-text" data-testid="richTextElement"><h1 class="font_0 wixui-rich-text__text" style="font-size:43px;"><span style="font-weight:bold;" class="wixui-rich-text__text"><a href="./index.html" class="wixui-rich-text__text">Giovanni (Gio) Chajon</a></span></h1>
+<body>
+  <div class="site-wrapper">
 
-<h1 class="font_0 wixui-rich-text__text" style="font-size:18px;"><span style="font-size:18px;" class="wixui-rich-text__text"><a href="./index.html" class="wixui-rich-text__text">IT Professional / Ham Radio Enthusiast ( VE6GIO ) / Homebrewing and Electronics</a></span></h1></div><!--/$--></div></div></div></div></header><main id="PAGES_CONTAINER" class="PAGES_CONTAINER" tabindex="-1" data-main-content="true"><div id="SITE_PAGES" class="JsJXaX SITE_PAGES"><div id="SITE_PAGES_TRANSITION_GROUP" class="AnQkDU"><div id="cm8a" class="dBAkHi theme-vars cm8a"><div class="PFkO7r wixui-page" data-testid="page-bg"></div><div class="HT5ybB"><!--$--><div id="Containercm8a" class="Containercm8a SPY_vo"><div data-mesh-id="Containercm8ainlineContent" data-testid="inline-content" class=""><div data-mesh-id="Containercm8ainlineContent-gridContainer" data-testid="mesh-container-content"><!--$--><div id="WRchTxt18" class="MMl86N zQ9jDz qvSjx3 Vq6kJx WRchTxt18 wixui-rich-text" data-testid="richTextElement"><h2 class="font_2 wixui-rich-text__text" style="font-size:80px;">Ham Radio Information</h2></div><!--/$--><!--$--><div id="FvGrdLn6" class="FvGrdLn6 aVng1S wixui-horizontal-line"></div><!--/$--><!--$--><div id="WRchTxt5" class="MMl86N zQ9jDz qvSjx3 Vq6kJx WRchTxt5 wixui-rich-text" data-testid="richTextElement"><h6 class="font_6 wixui-rich-text__text" style="font-size:17px;">Licensing and current rigs</h6>
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+    <site-header>
+      <div class="header-inner">
 
-<h6 class="font_6 wixui-rich-text__text" style="font-size:17px;"><span class="wixGuard wixui-rich-text__text">​</span></h6>
+        <h1 class="site-title">
+          <a href="index.html">Giovanni (Gio) Chajon</a>
+        </h1>
 
-<p class="font_8 wixui-rich-text__text" style="font-size:13px;">
-  In 2025, I obtained my Amateur Radio Operator certificate — Basic with Honors — which grants me full HF operating privileges. My current Canadian callsign is <a href="https://apc-cap.ic.gc.ca/pls/apc_anon/query_amat_cs$callsign.QueryViewByKey?P_CALLSIGN=VE6GIO&Z_CHK=55985">VE6GIO</a>. Ham radio has been part of my life for a long time: back in 2003, while living in Guatemala, I was first licensed there as <strong>TG9AOO</strong>. Getting back on the air after all these years — this time from Alberta — has been incredibly rewarding.
-</p>
+        <p class="site-subtitle">
+          IT Professional /
+          Ham Radio Enthusiast (VE6GIO) /
+          Homebrewing and Electronics
+        </p>
 
-<p class="font_8 wixui-rich-text__text" style="font-size:13px;">&nbsp;</p>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Skills Portfolio</a></li>
+            <li><a href="projects.html">Dev Projects</a></li>
+            <li><a href="hamradio.htm" class="active">Ham Radio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-<p class="font_8 wixui-rich-text__text" style="font-size:13px;">
-  My current shack consists of three radios. For HF operations I run a <strong>Yaesu FT-710 AESS</strong>, a compact SDR-based transceiver that punches well above its size — I appreciate how capable it is for the bench space it takes up. For 2-meter base station use, I have a <strong>Yaesu FT-3185RASP</strong>, and as my mobile rig I still rely on my trusty old <strong>Yaesu FT-60R</strong> — my very first mobile radio, originally purchased back in Guatemala. It has earned its keep over the years and still works flawlessly.
-</p>
+      </div>
+    </site-header>
 
-<p class="font_8 wixui-rich-text__text" style="font-size:13px;">&nbsp;</p>
 
-<figure class="rig-figure">
-  <a href="https://www.yaesu.com/product-detail.aspx?Model=FT-710&CatName=HF%20Transceiver%20-%20Amplifier">
-    <span class="rig-crop">
-      <img src="https://www.yaesu.com/assets/FT-710_large.jpg" alt="Yaesu FT-710 AESS HF Transceiver">
-    </span>
-  </a>
-  <figcaption>Yaesu FT-710 AESS &mdash; HF/50&nbsp;MHz SDR Transceiver, 100W</figcaption>
-</figure>
+    <!-- =====================================================
+         MAIN CONTENT
+    ===================================================== -->
+    <main>
+      <div class="page-content">
 
-<p class="font_8 wixui-rich-text__text" style="font-size:13px;">&nbsp;</p>
+        <h2 class="pg-title">Ham Radio Information</h2>
 
-<p class="font_8 wixui-rich-text__text" style="font-size:13px;">
-  <a href="https://apc-cap.ic.gc.ca/pls/apc_anon/query_amat_cs$callsign.QueryViewByKey?P_CALLSIGN=VE6GIO&Z_CHK=55985">View the ISED certificate information for VE6GIO</a>
-</p>
+        <hr class="hr-main">
 
-</div><!--/$-->
-</div></div>
-</div><!--/$-->
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-</div>
-</div>
+        <!-- Licensing section -->
+        <h6 class="ham-heading">Licensing and current rigs</h6>
 
+        <p class="ham-body">
+          In 2025, I obtained my Amateur Radio Operator certificate — Basic with Honors — which grants
+          me full HF operating privileges. My current Canadian callsign is
+          <a href="https://apc-cap.ic.gc.ca/pls/apc_anon/query_amat_cs$callsign.QueryViewByKey?P_CALLSIGN=VE6GIO&Z_CHK=55985">VE6GIO</a>.
+          Ham radio has been part of my life for a long time: back in 2003, while living in Guatemala,
+          I was first licensed there as <strong>TG9AOO</strong>. Getting back on the air after all these
+          years — this time from Alberta — has been incredibly rewarding.
+        </p>
+
+        <p class="ham-body">
+          My current shack consists of three radios. For HF operations I run a <strong>Yaesu FT-710 AESS</strong>,
+          a compact SDR-based transceiver that punches well above its size — I appreciate how capable it is
+          for the bench space it takes up. For 2-meter base station use, I have a <strong>Yaesu FT-3185RASP</strong>,
+          and as my mobile rig I still rely on my trusty old <strong>Yaesu FT-60R</strong> — my very first mobile
+          radio, originally purchased back in Guatemala. It has earned its keep over the years and still works
+          flawlessly.
+        </p>
+
+        <figure class="rig-figure">
+          <a href="https://www.yaesu.com/product-detail.aspx?Model=FT-710&CatName=HF%20Transceiver%20-%20Amplifier">
+            <span class="rig-crop">
+              <img src="https://www.yaesu.com/assets/FT-710_large.jpg" alt="Yaesu FT-710 AESS HF Transceiver">
+            </span>
+          </a>
+          <figcaption>Yaesu FT-710 AESS &mdash; HF/50&nbsp;MHz SDR Transceiver, 100W</figcaption>
+        </figure>
+
+        <p class="ham-body">
+          <a href="https://apc-cap.ic.gc.ca/pls/apc_anon/query_amat_cs$callsign.QueryViewByKey?P_CALLSIGN=VE6GIO&Z_CHK=55985">View the ISED certificate information for VE6GIO</a>
+        </p>
+
+      </div><!-- /page-content -->
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+    <site-footer>
+      <div class="footer-inner">
+
+        <div class="footer-col">
+          <p class="footer-copy">&copy; 2026 Giovanni Chajon</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Call</h4>
+          <p><!-- 403-000-0000 --></p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="contact.html">Send a message</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow me</h4>
+          <div class="footer-social">
+
+            <a href="https://www.facebook.com/gchajon" target="_blank" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+
+            <a href="https://twitter.com/gchajon" target="_blank" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+
+            <a href="https://plus.google.com/+GiovanniChajon" target="_blank" aria-label="Google+">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7v-2h4V7l5 5-5 5z"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </site-footer>
+
+  </div><!-- /site-wrapper -->
 </body>
 </html>
