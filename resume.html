@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ── Colours directly from original Wix CSS vars ── */
+    /* ── Site-wide design tokens ── */
     :root {
+      /* Colours */
       --c-bg:      #eae5e5;
       --c-red:     #e83556;
       --c-red-dk:  #9b2439;
@@ -21,7 +22,12 @@
       --c-black:   #000;
       --c-grey:    #8b8b8b;
       --c-white:   #fff;
+
+      /* Layout */
       --site-w:    980px;
+
+      /* Side-panel skill icons — increase this value to make them larger */
+      --icon-size: 90px;
     }
 
     body { background-color: var(--c-bg); margin: 0; padding: 0; }
@@ -207,10 +213,10 @@
       margin-bottom: 4px;
     }
 
-    /* Teal icon SVG wrapper */
+    /* Teal icon wrapper — size controlled by --icon-size in :root */
     .icon-teal {
-      width: 45px;
-      height: 45px;
+      width: var(--icon-size);
+      height: var(--icon-size);
       display: block;
       margin-bottom: 11px;
     }
@@ -359,7 +365,7 @@
         <div class="sec-row">
           <div style="display:flex; flex-direction:column; gap:18px; flex-shrink:0; margin-right:18px;">
             <a class="sec-btn sec-btn--wide"
-               href="https://b67d30b9-a085-4521-981b-47f77f35bfc2.filesusr.com/ugd/bfebf2_cd966841ecca44c189da64c7d0ea6787.pdf"
+               href="assets/microsoft-cert-track.pdf"
                target="_blank"
                style="margin-right:0;"
                aria-label="Microsoft Cert Track">Microsoft<br>Cert Track</a>
@@ -445,13 +451,22 @@
         <h4>Follow me</h4>
         <div class="ftr-social">
           <a href="https://www.facebook.com/gchajon" target="_blank" aria-label="Facebook">
-            <img src="https://static.wixstatic.com/media/4f857b2e8a316c4e1ed16717a3d4ec8c.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4f857b2e8a316c4e1ed16717a3d4ec8c.png" alt="Facebook" width="22" height="22">
+            <!-- Facebook icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
           </a>
-          <a href="https://twitter.com/gchajon" target="_blank" aria-label="Twitter">
-            <img src="https://static.wixstatic.com/media/89b1d2497b29ccbb7d37be1ec6ef0052.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/89b1d2497b29ccbb7d37be1ec6ef0052.png" alt="Twitter" width="22" height="22">
+          <a href="https://twitter.com/gchajon" target="_blank" aria-label="Twitter / X">
+            <!-- X (Twitter) icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
           </a>
           <a href="https://plus.google.com/+GiovanniChajon" target="_blank" aria-label="Google+">
-            <img src="https://static.wixstatic.com/media/eb9767422f0e4c41a507d3e67c4ebac8.png/v1/fill/w_44,h_44,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/eb9767422f0e4c41a507d3e67c4ebac8.png" alt="Google+" width="22" height="22">
+            <!-- Google+ / G icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+              <path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 1 1 0-12.064 5.96 5.96 0 0 1 4.123 1.632l2.913-2.913A10.027 10.027 0 0 0 12.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748z"/>
+            </svg>
           </a>
         </div>
       </div>
