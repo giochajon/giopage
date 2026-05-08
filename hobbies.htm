@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Giovanni (Gio) Chajon — Hobbies</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Open Graph / Social sharing meta tags -->
+  <meta property="og:title"     content="Giovanni Chajon — Hobbies">
+  <meta property="og:site_name" content="Giovanni Chajon">
+  <meta property="og:type"      content="website">
+  <meta name="twitter:card"     content="summary_large_image">
+  <meta name="twitter:title"    content="Giovanni Chajon — Hobbies">
+
+  <style>
+    /* =========================================================
+       PAGE-LEVEL STYLES — Hobbies page only
+    ========================================================= */
+
+    /* ----------------------------------------------------------
+       HOBBY CIRCLE BADGES
+    ---------------------------------------------------------- */
+    .proj-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      padding: 16px;
+
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--clr-text-light);
+      text-align: center;
+      line-height: 1.35;
+
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .proj-circle:hover {
+      transform: scale(1.05);
+      text-decoration: none;
+    }
+
+    /* Colour variants */
+    .proj-red          { background-color: var(--clr-accent-red); }
+    .proj-red:hover    { background-color: var(--clr-accent-red-dk); }
+
+    .proj-teal         { background-color: var(--clr-accent-teal); }
+    .proj-teal:hover   { background-color: var(--clr-accent-teal-dk); }
+
+    .proj-gold         { background-color: var(--clr-accent-gold); }
+    .proj-gold:hover   { background-color: var(--clr-accent-gold-dk); }
+
+    .proj-green        { background-color: var(--clr-accent-green); }
+    .proj-green:hover  { background-color: var(--clr-accent-green-dk); }
+
+
+    /* ----------------------------------------------------------
+       HOBBY ENTRY LAYOUT
+       Two-column row: circle badge on LEFT, text on RIGHT.
+    ---------------------------------------------------------- */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-entry {
+      display: grid;
+      grid-template-columns: auto 1fr;   /* badge left, text right */
+      gap: 32px;
+      align-items: center;
+      padding: 32px 0;
+      border-top: 1px solid var(--clr-border);
+    }
+
+    .project-entry:last-child {
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .project-entry h3 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      color: var(--clr-text-dark);
+      margin-bottom: 10px;
+    }
+
+    .project-entry p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--clr-text);
+      margin-bottom: 8px;
+    }
+
+    .project-entry p:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-badge {
+      flex-shrink: 0;
+    }
+
+
+    /* ----------------------------------------------------------
+       PAGE CALL-TO-ACTION
+    ---------------------------------------------------------- */
+    .projects-page-cta {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .projects-page-cta a {
+      color: var(--clr-accent-red);
+      font-weight: 600;
+    }
+
+    .projects-page-cta a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ----------------------------------------------------------
+       RESPONSIVE — single column on narrow screens
+    ---------------------------------------------------------- */
+    @media (max-width: 600px) {
+      .project-entry {
+        grid-template-columns: 1fr;
+      }
+
+      /* Circle stays on top on mobile */
+      .project-badge {
+        order: -1;
+      }
+
+      .proj-circle {
+        width: 130px;
+        height: 130px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-wrapper">
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+    <site-header>
+      <div class="header-inner">
+
+        <h1 class="site-title">
+          <a href="index.html">Giovanni (Gio) Chajon</a>
+        </h1>
+
+        <p class="site-subtitle">
+          IT Professional /
+          Ham Radio Enthusiast (VE6GIO) /
+          Homebrewing and Electronics
+        </p>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html"              >Home</a></li>
+            <li><a href="resume.html"             >Skills Portfolio</a></li>
+            <li><a href="projects.html"           >Dev Projects</a></li>
+            <li><a href="hobbies.htm" class="active">Hobbies</a></li>
+            <li><a href="contact.html"            >Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </site-header><!-- /site-header -->
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ===================================================== -->
+    <main>
+      <div class="page-content">
+
+        <h2 class="page-title">Hobbies &amp; Personal Projects</h2>
+
+        <div class="projects-list">
+
+          <!-- -----------------------------------------------
+               HOBBY 1 — Retro NES Cabinet
+          ----------------------------------------------- -->
+          <div class="project-entry">
+
+            <div class="project-badge">
+              <a
+                href="#"
+                class="proj-circle proj-red"
+                aria-label="Recycled Beverage Centre transformed into retro NES Box"
+              >
+                Recycled Beverage Centre transformed into retro NES Box
+              </a>
+            </div>
+
+            <div class="project-text">
+              <h3>Retro NES Gaming Cabinet from a Salvaged Mini-Fridge</h3>
+
+              <p>
+                Spotted at the curb on recycling day: a compact beverage mini-fridge,
+                a monitor, and a pair of speakers — the raw ingredients for something
+                much more interesting than cold drinks. After hauling them home, I
+                stripped out the compressor, which freed up a surprisingly generous
+                cavity perfect for housing the speakers and giving them the room they
+                need to produce full, rich sound.
+              </p>
+
+              <p>
+                Into that reclaimed shell went a Raspberry Pi 2 running at an
+                overclocked speed, paired with a USB NES-style controller for
+                authentic retro feel. I configured emulators for the cartridges I own
+                and tuned the whole stack until it ran cleanly — the result is a
+                self-contained retro gaming cabinet that looks right at home in the
+                living room and plays like a trip back to 1987.
+              </p>
+            </div>
+
+          </div><!-- /project-entry -->
+
+
+          <!-- -----------------------------------------------
+               ADD MORE HOBBIES HERE
+               Copy any project-entry block above and edit.
+               Remember: badge comes BEFORE project-text in
+               the markup so the circle appears on the left.
+          ----------------------------------------------- -->
+
+
+        </div><!-- /projects-list -->
+
+
+        <!-- Call to action -->
+        <p class="projects-page-cta">
+          Want to chat about any of these?
+          <a href="contact.html">&gt;&gt;</a>
+        </p>
+
+        <div style="text-align:center; margin-top:24px;">
+          <a href="contact.html" class="btn">Let's Talk</a>
+        </div>
+
+      </div><!-- /page-content -->
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+    <site-footer>
+      <div class="footer-inner">
+
+        <div class="footer-col">
+          <p class="footer-copy">&copy; 2026 Giovanni Chajon</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow me</h4>
+          <div class="footer-social">
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/gchajon"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4
+                         v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+
+            <!-- Twitter / X -->
+            <a
+              href="https://twitter.com/gchajon"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53
+                         4.48 4.48 0 0 0-7.86 3v1
+                         A10.66 10.66 0 0 1 3 4s-4 9 5 13
+                         a11.64 11.64 0 0 1-7 2
+                         c9 5 20 0 20-11.5
+                         a4.5 4.5 0 0 0-.08-.83
+                         A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+
+            <!-- Google+ -->
+            <a
+              href="https://plus.google.com/+GiovanniChajon"
+              target="_blank"
+              aria-label="Google+"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12
+                         s4.48 10 10 10 10-4.48 10-10
+                         S17.52 2 12 2zm-1 15v-4H7
+                         v-2h4V7l5 5-5 5z"/>
+              </svg>
+            </a>
+
+          </div><!-- /footer-social -->
+        </div><!-- /footer-col -->
+
+      </div><!-- /footer-inner -->
+    </site-footer><!-- /site-footer -->
+
+  </div><!-- /site-wrapper -->
+</body>
+</html>
