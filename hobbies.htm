@@ -134,6 +134,45 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
 
     /* ----------------------------------------------------------
+       PROJECT PHOTO GALLERY
+    ---------------------------------------------------------- */
+    .project-photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .project-photos a {
+      display: block;
+      flex: 1 1 calc(33% - 10px);
+      min-width: 120px;
+      border-radius: 6px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .project-photos img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--transition, 0.2s ease);
+      border-radius: 6px;
+    }
+
+    .project-photos a:hover img {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .project-photos a {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+
+
+    /* ----------------------------------------------------------
        PAGE CALL-TO-ACTION
     ---------------------------------------------------------- */
     .projects-page-cta {
@@ -257,6 +296,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 self-contained retro gaming cabinet that looks right at home in the
                 living room and plays like a trip back to 1987.
               </p>
+
+              <div class="project-photos">
+                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipMP3Haw5LVjObNdmColNOC-c42FO-azsX3ciBc?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
+                  <img src="https://lh3.googleusercontent.com/pw/AP1GczMcaGOJHGuctgjZiioC9f62zC93ubPeDt3T7RWm4v_zyqx0n4WjJf_xY4Z99gsVbfehu1zKV2sjWz5uoq1GJLKBVgBeFpH6ECRCnwAt1fsuFCUultQ=w400-k-no" alt="Retro NES Cabinet photo 1">
+                </a>
+                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipNqy0q1dY3O8feCaXQ_VGVJvwsNPMDjwA5quLw?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
+                  <img src="https://lh3.googleusercontent.com/pw/AP1GczOjVV8nByq3tO7mfjYCqzacEyVnvfa2-6wf1to5HmMW-uCkYHmo1oNvI56WdDdUktqOmxR9-wixqX7yigvmUyFsIXlyhVvmeBhbnYLB8cb4mN7rXFU=w400-k-no" alt="Retro NES Cabinet photo 2">
+                </a>
+                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipNQDNLLYPec3HpwqV7_KycvTC739B2OLzx1oZo?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
+                  <img src="https://lh3.googleusercontent.com/pw/AP1GczOallOuBKIovDycwvLC1X9PsRGLlPK97t_8z6XbyeXWavbekvEFqRmQwgNTiopvGt9vLKK8mVRcIgM6FTRSifH8L2BF4ELWIWd0OLjRG1Wd90QiBak=w400-k-no" alt="Retro NES Cabinet photo 3">
+                </a>
+                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipPtihZq2S7m4eHNp9Bjb1g3N1Is46UO8qGZfyc?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
+                  <img src="https://lh3.googleusercontent.com/pw/AP1GczN7uO_epOkubAOb6fR9fzhIu-rj71gGitXVpT1WOkyWB3V5V0MrAhupF5lmY_r566I82l99jaaXSTzOI9OSPJiDZ1RDH2tIQuVP-waBdOtzh1UsJ1k=w400-k-no" alt="Retro NES Cabinet photo 4">
+                </a>
+                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipOd6XbBioa2fCi2u7H1t1b4L6oG1_k3Pxx47h4?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
+                  <img src="https://lh3.googleusercontent.com/pw/AP1GczPG7ReCFXRFoDcgf0vFj5L2n12wfujUruUdwvlTP9RLaf06gZTt4afyST9WEB1qsHRdNO6ttdmVOhlIw6aOvJdONfacl7gWEyJpiajdVNg4NTqloFA=w400-k-no" alt="Retro NES Cabinet photo 5">
+                </a>
+              </div>
             </div>
 
           </div><!-- /project-entry -->
