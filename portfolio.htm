@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Giovanni (Gio) Chajon — Hobbies</title>
+  <title>Giovanni (Gio) Chajon — Dev Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,20 +31,17 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
   <link rel="stylesheet" href="assets/style.css">
 
   <!-- Open Graph / Social sharing meta tags -->
-  <meta property="og:title"     content="Giovanni Chajon — Hobbies">
+  <meta property="og:title"     content="Giovanni Chajon — Dev Portfolio">
   <meta property="og:site_name" content="Giovanni Chajon">
   <meta property="og:type"      content="website">
   <meta name="twitter:card"     content="summary_large_image">
-  <meta name="twitter:title"    content="Giovanni Chajon — Hobbies">
+  <meta name="twitter:title"    content="Giovanni Chajon — Dev Portfolio">
 
   <style>
     /* =========================================================
-       PAGE-LEVEL STYLES — Hobbies page only
+       PAGE-LEVEL STYLES — Dev Portfolio page only
     ========================================================= */
 
-    /* ----------------------------------------------------------
-       HOBBY CIRCLE BADGES
-    ---------------------------------------------------------- */
     .proj-circle {
       display: inline-flex;
       align-items: center;
@@ -87,11 +84,10 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     .proj-green        { background-color: var(--clr-accent-green); }
     .proj-green:hover  { background-color: var(--clr-accent-green-dk); }
 
+    .proj-purple       { background-color: var(--clr-accent-purple); }
+    .proj-purple:hover { background-color: var(--clr-accent-purple-dk); }
 
-    /* ----------------------------------------------------------
-       HOBBY ENTRY LAYOUT
-       Two-column row: circle badge on LEFT, text on RIGHT.
-    ---------------------------------------------------------- */
+
     .projects-list {
       display: flex;
       flex-direction: column;
@@ -99,7 +95,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
     .project-entry {
       display: grid;
-      grid-template-columns: auto 1fr;   /* badge left, text right */
+      grid-template-columns: auto 1fr;
       gap: 32px;
       align-items: center;
       padding: 32px 0;
@@ -132,49 +128,17 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       flex-shrink: 0;
     }
 
-
-    /* ----------------------------------------------------------
-       PROJECT PHOTO GALLERY
-    ---------------------------------------------------------- */
-    .project-photos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
+    .tech-tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--clr-accent-teal-dk);
+      background: rgba(97,208,212,.12);
+      padding: 3px 8px;
+      border-radius: 3px;
     }
 
-    .project-photos a {
-      display: block;
-      flex: 1 1 calc(33% - 10px);
-      min-width: 120px;
-      border-radius: 6px;
-      overflow: hidden;
-      line-height: 0;
-    }
-
-    .project-photos img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      display: block;
-      transition: transform var(--transition, 0.2s ease);
-      border-radius: 6px;
-    }
-
-    .project-photos a:hover img {
-      transform: scale(1.03);
-    }
-
-    @media (max-width: 600px) {
-      .project-photos a {
-        flex: 1 1 calc(50% - 10px);
-      }
-    }
-
-
-    /* ----------------------------------------------------------
-       PAGE CALL-TO-ACTION
-    ---------------------------------------------------------- */
     .projects-page-cta {
       margin-top: 48px;
       text-align: center;
@@ -190,16 +154,11 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       text-decoration: underline;
     }
 
-
-    /* ----------------------------------------------------------
-       RESPONSIVE — single column on narrow screens
-    ---------------------------------------------------------- */
     @media (max-width: 600px) {
       .project-entry {
         grid-template-columns: 1fr;
       }
 
-      /* Circle stays on top on mobile */
       .project-badge {
         order: -1;
       }
@@ -238,13 +197,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <nav class="site-nav" aria-label="Main navigation">
           <ul>
-            <li><a href="index.html"              >Home</a></li>
-            <li><a href="resume.html"             >Skills Portfolio</a></li>
-            <li><a href="projects.html"           >Dev Projects</a></li>
-            <li><a href="hobbies.htm" class="active">Hobbies</a></li>
-            <li><a href="portfolio.htm"           >Dev Portfolio</a></li>
-            <li><a href="hamradio.htm"            >Ham Radio</a></li>
-            <li><a href="contact.html"            >Contact</a></li>
+            <li><a href="index.html"                    >Home</a></li>
+            <li><a href="resume.html"                   >Skills Portfolio</a></li>
+            <li><a href="projects.html"                 >Dev Projects</a></li>
+            <li><a href="hobbies.htm"                   >Hobbies</a></li>
+            <li><a href="portfolio.htm" class="active"  >Dev Portfolio</a></li>
+            <li><a href="hamradio.htm"                  >Ham Radio</a></li>
+            <li><a href="contact.html"                  >Contact</a></li>
           </ul>
         </nav>
 
@@ -258,73 +217,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main>
       <div class="page-content">
 
-        <h2 class="page-title">Hobbies &amp; Personal Projects</h2>
+        <h2 class="page-title">Dev Portfolio Projects</h2>
 
         <div class="projects-list">
 
           <!-- -----------------------------------------------
-               HOBBY 1 — Retro NES Cabinet
+               PROJECT 1 — Calgary Communities
           ----------------------------------------------- -->
           <div class="project-entry">
 
             <div class="project-badge">
               <a
-                href="#"
-                class="proj-circle proj-red"
-                aria-label="Recycled Beverage Centre transformed into retro NES Box"
+                href="https://cgyhood.onrender.com"
+                target="_blank"
+                class="proj-circle proj-purple"
+                aria-label="Calgary Communities"
               >
-                Recycled Beverage Centre transformed into retro NES Box
+                Calgary Communities
               </a>
             </div>
 
             <div class="project-text">
-              <h3>Retro NES Gaming Cabinet from a Salvaged Mini-Fridge</h3>
+              <h3>CGyHood — Calgary Community Comparator</h3>
 
               <p>
-                Spotted at the curb on recycling day: a compact beverage mini-fridge,
-                a monitor, and a pair of speakers — the raw ingredients for something
-                much more interesting than cold drinks. After hauling them home, I
-                stripped out the compressor, which freed up a surprisingly generous
-                cavity perfect for housing the speakers and giving them the room they
-                need to produce full, rich sound.
+                Calgary has over 200 communities — roughly the same footprint as New York City —
+                which makes choosing a neighbourhood to live in or start a business surprisingly
+                difficult. CGyHood was built to solve that problem: select any two communities and
+                the app places them side by side, overlaying their boundaries on Google Maps and
+                surfacing key statistics drawn from the City of Calgary's open data portal.
               </p>
 
               <p>
-                Into that reclaimed shell went a Raspberry Pi 2 running at an
-                overclocked speed, paired with a USB NES-style controller for
-                authentic retro feel. I configured emulators for the cartridges I own
-                and tuned the whole stack until it ran cleanly — the result is a
-                self-contained retro gaming cabinet that looks right at home in the
-                living room and plays like a trip back to 1987.
+                The project is a full-stack collaboration between Giovanni Chajon and Alex Jinga.
+                A React front-end handles the interactive map (rendered via the Google Maps API)
+                and the comparison UI, while a Python/Flask API and a Node/Express/Knex server
+                serve the community data as JSON. All records live in a PostgreSQL database hosted
+                on Amazon AWS RDS. Community boundary polygons were originally in ArcGIS format
+                and were converted to Google Maps-compatible coordinates using a custom Python
+                pipeline.
               </p>
 
-              <div class="project-photos">
-                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipMP3Haw5LVjObNdmColNOC-c42FO-azsX3ciBc?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
-                  <img src="https://lh3.googleusercontent.com/pw/AP1GczMcaGOJHGuctgjZiioC9f62zC93ubPeDt3T7RWm4v_zyqx0n4WjJf_xY4Z99gsVbfehu1zKV2sjWz5uoq1GJLKBVgBeFpH6ECRCnwAt1fsuFCUultQ=w400-k-no" alt="Retro NES Cabinet photo 1">
-                </a>
-                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipNqy0q1dY3O8feCaXQ_VGVJvwsNPMDjwA5quLw?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
-                  <img src="https://lh3.googleusercontent.com/pw/AP1GczOjVV8nByq3tO7mfjYCqzacEyVnvfa2-6wf1to5HmMW-uCkYHmo1oNvI56WdDdUktqOmxR9-wixqX7yigvmUyFsIXlyhVvmeBhbnYLB8cb4mN7rXFU=w400-k-no" alt="Retro NES Cabinet photo 2">
-                </a>
-                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipNQDNLLYPec3HpwqV7_KycvTC739B2OLzx1oZo?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
-                  <img src="https://lh3.googleusercontent.com/pw/AP1GczOallOuBKIovDycwvLC1X9PsRGLlPK97t_8z6XbyeXWavbekvEFqRmQwgNTiopvGt9vLKK8mVRcIgM6FTRSifH8L2BF4ELWIWd0OLjRG1Wd90QiBak=w400-k-no" alt="Retro NES Cabinet photo 3">
-                </a>
-                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipPtihZq2S7m4eHNp9Bjb1g3N1Is46UO8qGZfyc?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
-                  <img src="https://lh3.googleusercontent.com/pw/AP1GczN7uO_epOkubAOb6fR9fzhIu-rj71gGitXVpT1WOkyWB3V5V0MrAhupF5lmY_r566I82l99jaaXSTzOI9OSPJiDZ1RDH2tIQuVP-waBdOtzh1UsJ1k=w400-k-no" alt="Retro NES Cabinet photo 4">
-                </a>
-                <a href="https://photos.google.com/share/AF1QipNvuDI_LQJTzCA6gQ5lqsaoOPRQb-K-b8bthMDjwDCbATBwXjM4Na3mOC0n7n6MSA/photo/AF1QipOd6XbBioa2fCi2u7H1t1b4L6oG1_k3Pxx47h4?key=TFhiMlhXRnZ0R255VGg1UU04aUkzWTk4VDI1UHNB" target="_blank">
-                  <img src="https://lh3.googleusercontent.com/pw/AP1GczPG7ReCFXRFoDcgf0vFj5L2n12wfujUruUdwvlTP9RLaf06gZTt4afyST9WEB1qsHRdNO6ttdmVOhlIw6aOvJdONfacl7gWEyJpiajdVNg4NTqloFA=w400-k-no" alt="Retro NES Cabinet photo 5">
-                </a>
+              <div style="margin-top:16px;">
+                <img
+                  src="https://i.imgur.com/EluxAl4.png"
+                  alt="CGyHood Architecture Diagram"
+                  style="max-width:100%; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,.12);"
+                >
+                <p style="margin-top:8px;">
+                  <a href="https://github.com/giochajon/CalgaryCommunities" target="_blank" style="color:var(--clr-accent-teal-dk); font-weight:600;">Source code on GitHub</a>
+                </p>
               </div>
+
+              <span class="tech-tag">React · Python / Flask · Node / Express · PostgreSQL · Google Maps API</span>
             </div>
 
           </div><!-- /project-entry -->
 
 
           <!-- -----------------------------------------------
-               ADD MORE HOBBIES HERE
-               Copy any project-entry block above and edit.
-               Remember: badge comes BEFORE project-text in
-               the markup so the circle appears on the left.
+               ADD MORE PROJECTS HERE
+               Copy the project-entry block above and edit.
           ----------------------------------------------- -->
 
 
