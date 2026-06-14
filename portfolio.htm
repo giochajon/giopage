@@ -241,21 +241,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h3>CGyHood — Calgary Community Comparator</h3>
 
               <p>
-                Calgary has over 200 communities — roughly the same footprint as New York City —
-                which makes choosing a neighbourhood to live in or start a business surprisingly
-                difficult. CGyHood was built to solve that problem: select any two communities and
-                the app places them side by side, overlaying their boundaries on Google Maps and
-                surfacing key statistics drawn from the City of Calgary's open data portal.
+                Calgary has over 200 communities — roughly the same geographic footprint as
+                New York City — yet no simple tool existed to compare two of them side by side.
+                CGyHood solves that: pick any two communities and the app overlays their boundaries
+                on an interactive Google Map, then surfaces key demographics and statistics sourced
+                directly from the City of Calgary's open data portal, making it easy to evaluate
+                neighbourhoods for relocation or business planning.
               </p>
 
               <p>
-                The project is a full-stack collaboration between Giovanni Chajon and Alex Jinga.
-                A React front-end handles the interactive map (rendered via the Google Maps API)
-                and the comparison UI, while a Python/Flask API and a Node/Express/Knex server
-                serve the community data as JSON. All records live in a PostgreSQL database hosted
-                on Amazon AWS RDS. Community boundary polygons were originally in ArcGIS format
-                and were converted to Google Maps-compatible coordinates using a custom Python
-                pipeline.
+                Built as a full-stack collaboration with Alex Jinga, the project intentionally
+                demonstrates the interaction of multiple technology tiers. The React front-end uses
+                the Google Maps JavaScript API (via the react-google-maps library) and
+                react-bootstrap to render community polygons as live map overlays and drive the
+                comparison UI. Behind it, a Python / Flask REST API is the primary data layer,
+                serialising records from a PostgreSQL database hosted on Amazon AWS RDS. A
+                Node / Express / Knex server was added as a proof-of-concept alternate back-end,
+                showing that the same front-end can consume JSON from either runtime. Community
+                boundary polygons were originally distributed in ArcGIS format; a custom Python
+                pipeline converted them to Google Maps-compatible coordinates before loading them
+                into the database.
+              </p>
+
+              <p>
+                The stack reflects the full-spectrum skills developed through the EvolveU Full Stack
+                Developer programme — JavaScript ES6, React, Python, Flask, Node.js / Express,
+                PostgreSQL, and Amazon AWS — applied to a real civic problem rather than a
+                contrived exercise.
               </p>
 
               <div style="margin-top:16px;">
@@ -269,7 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p>
               </div>
 
-              <span class="tech-tag">React · Python / Flask · Node / Express · PostgreSQL · Google Maps API</span>
+              <span class="tech-tag">React · react-bootstrap · Python / Flask · Node / Express / Knex · PostgreSQL · AWS RDS · Google Maps API</span>
             </div>
 
           </div><!-- /project-entry -->
